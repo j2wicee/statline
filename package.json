@@ -1,0 +1,13 @@
+{
+  "name": "statline",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter @statline/api dev\" \"pnpm --filter @statline/web dev\"",
+    "build": "pnpm --filter @statline/shared build && pnpm --filter @statline/api build && pnpm --filter @statline/web build",
+    "typecheck": "pnpm --filter @statline/api exec tsc --noEmit && pnpm --filter @statline/web exec tsc --noEmit"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
