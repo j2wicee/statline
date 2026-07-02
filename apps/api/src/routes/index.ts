@@ -12,9 +12,13 @@
 
 import { Router, IRouter } from 'express';
 import authRouter from './auth';
+import propsRouter from './props'
+import picksRouter from './picks'
 
 const router: IRouter = Router();
 
 router.use('/auth', authRouter);
+router.use('/props', propsRouter);
+router.use('/picks', picksRouter);
 
 export default router;
